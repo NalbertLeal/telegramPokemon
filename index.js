@@ -4,8 +4,6 @@ let pokemonId = (pokemon_id) => {
     return pokemons[pokemon_id].name;
 }
 
-const request = require("requests")
-
 /**
  * Responds to any HTTP request that can provide a "message" field in the body.
  *
@@ -17,7 +15,7 @@ exports.pokemon = (req, res) => {
     if(update.hasOwnProperty("message")) {
 
         let id_pokemon = update.message.text;
-        if(399 < id_pokemon) {
+        if(399 < id_pokemon || id_pokemon < 0) {
             return res.json({
                 method: 'sendMessage',
                 chat_id: update.message.chat.id,
