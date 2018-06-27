@@ -9,6 +9,5 @@
   "author": "Nalbert Gabriel Melo Leal",
   "license": "ISC",
   "dependencies": {
-    "requests": "*"
   }
 }
